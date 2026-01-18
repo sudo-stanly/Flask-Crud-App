@@ -18,6 +18,8 @@ class myTask(db.Model):
     complete = db.Column(db.Integer,default=0)
     created = db.Column(db.DateTime, default=datetime.utcnow)
 
+    def __repr__(self) -> str:
+        return f"TTask {self.id}"
 
 
 @app.route("/")
